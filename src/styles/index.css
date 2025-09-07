@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #38b6ff;
+}
+
+/* page background */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* glass */
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+}
+
+/* hero gradient and card effects */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(56,182,255,0.06), rgba(88,98,255,0.03));
+}
+
+.card-tilt {
+  transform: perspective(1000px) translateZ(0);
+  transition: transform 300ms cubic-bezier(.2,.9,.3,1), box-shadow 300ms;
+}
+.card-tilt:hover {
+  transform: perspective(1000px) translateZ(12px) translateY(-6px);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.25);
+}
+
+.container-max { max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
